@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>큐브시티</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@4.0.1/reset.min.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header class="section">
+        <!--
+        <div class="subHeader">
+            <span id="speakerIcon"></span>
+            <span id="notice">대충 간단한 공지</span>
+        </div>
+         -->
+        <div class="mainHeader">
+            <div class="navigation">
+                <nav>소개</nav>
+                <nav>규칙</nav>
+                <nav>입문 가이드</nav>
+                <nav>모든 가이드</nav>
+            </div>
+            <a href="./index.html" id="logo"><img src="./img/main_ci.png" alt="큐브시티 로고"></a>
+        </div>
+    </header>
+    <main>
+        <div><img src="./img/main.png" alt="메인사진"></div>
+    </main>
+    <section class="section scroll_wrap">
+        <div class="intro scroll_on">
+            <div class="text">
+                <span>내 꿈의 도시를 이곳에</span>
+                <h2>건축</h2>                   
+            </div>
+            <div class="box opacity">
+                <div class="build animation">
+                    <div class="build_txt">
+                        <h2>서경시</h2>
+                        <span>큐브시티의 메인 도시</span>
+                        <br>
+                        <img src="./img/more.png" alt="자세히 보기">
+                    </div>
+                </div>
+                <div class="build animation">
+                    <div class="build_txt">
+                        <h2>화송시</h2>
+                        <span>큐브시티의 신도시</span>
+                        <br>
+                        <img src="./img/more.png" alt="자세히 보기">
+                    </div>
+                </div>
+                <div class="build animation">
+                    <div class="build_txt">
+                        <h2>강변시</h2>
+                        <span>개발 예정 도시</span>
+                        <br>
+                        <img src="./img/more.png" alt="자세히 보기">
+                    </div>
+                </div>
+                <div class="build animation">
+                    <div class="build_txt">
+                        <h2>서경시</h2>
+                        <span>일본 전통풍의 도시</span>
+                        <br>
+                        <img src="./img/more.png" alt="자세히 보기">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="intro">
+            <div class="text">
+                <span>현실적이고 다양한 기능</span>
+                <h2>플러그인</h2>
+            </div>
+            <div class="box">
+                <div class="plugin">
+                    <img src="./img/WorldEdit.png" alt="월드에딧을 사용한 도시 사진" width="602px" height="362px">
+                    <div class="worldEdit">
+                        <h2>월드에딧 시스템</h2>
+                        <span>월드에딧과 월드 보안 플러그인 등 <b>필요한 것은 모두 준비</b>되어 있습니다.</span>
+                    </div>
+                    <img src="./img/train.jpg" alt="기차 사진" width="560px" height="339px" style="margin-left: 25px;margin-top: 91px;">
+                    <div class="train">
+                        <h2>현실적 열차 외관</h2>
+                        <span>큐브시티에는 열차의 외관이 재현되어 있습니다.<br/>실제로 존재하는 디자인의 열차들을 <b>큐브시티에서 만나보세요.</b></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="intro">
+            <div class="text">
+                <span>무제한, 무한의 도시</span>
+                <h2>큐브시티</h2>
+            </div>
+            <div class="box">
+                <div class="kubeCity">
+                    <img src="./img/ReturnsMainWorld.png" alt="지도">
+                    <h2>끝없는 맵 크기</h2>
+                    <span>지형이 자동으로 생성되기 때문에<br/>맵이 꽉 찰 걱정은 전혀 없죠.</span>
+                </div>
+                <div class="kubeCity">
+                    <img src="./img/scale.png" alt="지도">
+                    <h2>제한 없는 스케일</h2>
+                    <span>건축의 크기에 제한 없이,<br><b>상상하는 무엇이든</b> 지을 수 있습니다.</span>
+                </div>
+                <div class="kubeCity">
+                    <img src="./img/InRealpng.png" alt="지도">
+                    <h2>무한한 가능성을 현실로</h2>
+                    <span>큐브시티에서 상상의 나래를 펼치며,<br><b>꿈을 현실로</b> 바꾸어보세요.</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <img src="./img/main_ci.png" alt="큐브시티 로고" width="230px">
+        <div>
+            웹사이트 제작자: 황상호<br/>
+            연락처(mail): sangho5987@gmail.com<br/>
+            <span>
+            Copyright 2025. 황상호 All rights reserverd.<br/>
+            본 사이트의 저작권은 CI, 이미지는 큐브시티에게 있으며,<br/>
+            CI와 이미지를 제외한 디자인 등은 황상호에게 있음을 명시합니다.
+            </span>
+        </div>
+        <div></div>
+        <div></div>
+    </footer>
+    <script>
+        let build = document.querySelectorAll("div.build");
+        let build_img = ["sc","hc","gc","mc"];
+        build.forEach((element, index)=>{
+            element.style.backgroundImage = `url('./img/${build_img[index]}.png')`;
+        });
+    </script>
+</body>
+</html>
