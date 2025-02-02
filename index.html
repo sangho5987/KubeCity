@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>큐브시티</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@4.0.1/reset.min.css">
     <link rel="stylesheet" href="./style.css">
 </head>
@@ -24,11 +25,14 @@
             <a href="./index.html" id="logo"><img src="./img/main_ci.png" alt="큐브시티 로고"></a>
         </div>
     </header>
+    <!--디스코드 버튼-->
+    <a href="https://discord.com/invite/H55f2RN" id="discord" class="animation"><img id="discordImg" src="./img/discord-mark-black.png" alt="디스코드 로고"></a>
+    <!--디스코드 버튼-->
     <main>
         <div><img src="./img/main.png" alt="메인사진"></div>
     </main>
-    <section class="section scroll_wrap">
-        <div class="intro scroll_on">
+    <section class="section" style="margin-top: 0;">
+        <div class="intro">
             <div class="text">
                 <span>내 꿈의 도시를 이곳에</span>
                 <h2>건축</h2>                   
@@ -75,12 +79,12 @@
             </div>
             <div class="box">
                 <div class="plugin">
-                    <img src="./img/WorldEdit.png" alt="월드에딧을 사용한 도시 사진" width="602px" height="362px">
+                    <img src="./img/WorldEdit.png" alt="월드에딧을 사용한 도시 사진" id="worldEdit">
                     <div class="worldEdit">
                         <h2>월드에딧 시스템</h2>
                         <span>월드에딧과 월드 보안 플러그인 등 <b>필요한 것은 모두 준비</b>되어 있습니다.</span>
                     </div>
-                    <img src="./img/train.jpg" alt="기차 사진" width="560px" height="339px" style="margin-left: 25px;margin-top: 91px;">
+                    <img src="./img/train.jpg" alt="기차 사진" id="train">
                     <div class="train">
                         <h2>현실적 열차 외관</h2>
                         <span>큐브시티에는 열차의 외관이 재현되어 있습니다.<br/>실제로 존재하는 디자인의 열차들을 <b>큐브시티에서 만나보세요.</b></span>
@@ -93,7 +97,7 @@
                 <span>무제한, 무한의 도시</span>
                 <h2>큐브시티</h2>
             </div>
-            <div class="box">
+            <div class="box opacity">
                 <div class="kubeCity">
                     <img src="./img/ReturnsMainWorld.png" alt="지도">
                     <h2>끝없는 맵 크기</h2>
@@ -113,7 +117,7 @@
         </div>
     </section>
     <footer>
-        <img src="./img/main_ci.png" alt="큐브시티 로고" width="230px">
+        <img src="./img/main_ci.png" alt="큐브시티 로고">
         <div>
             웹사이트 제작자: 황상호<br/>
             연락처(mail): sangho5987@gmail.com<br/>
@@ -127,10 +131,18 @@
         <div></div>
     </footer>
     <script>
+        let nav = document.querySelectorAll("nav");
+        let nav_name = ["큐브시티/소개","큐브시티/규칙","서버_입문_가이드","서버_가이드"]
+        nav.forEach((element, index)=>{
+            element.onclick = ()=>window.location.href = `https://wiki.kubecity.kr/wiki/${nav_name[index]}`;
+        });
+
         let build = document.querySelectorAll("div.build");
         let build_img = ["sc","hc","gc","mc"];
+        let build_name = ["서경시", "화송시", "강변시", "모모야마시"]
         build.forEach((element, index)=>{
             element.style.backgroundImage = `url('./img/${build_img[index]}.png')`;
+            element.onclick = ()=>window.location.href = `https://wiki.kubecity.kr/wiki/${build_name[index]}`;
         });
     </script>
 </body>
