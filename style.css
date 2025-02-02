@@ -1,66 +1,120 @@
 @import url(http://fonts.googleapis.com/earlyaccess/nanumgothiccoding.css);
-:root {
-    --black : #191919;
-    --pink : #FF668C;
-}
+:root { --black: #191919; --pink: #FF668C; }
 
-@media screen and (min-width: 1400px){
-    /*공통 적용*/
-    body {background-color: var(--black); color: white;font-family: 'Nanum Gothic Coding';}
-    b {color: gold;}
-    .section {margin: 0 100px 150px 100px;}
+/* 공통 레이아웃 */
+body { background-color: var(--black); color: white; font-family: 'Nanum Gothic Coding';}
+b { color: gold; }
 
-    /*header 부분*/
-    /*
-    .subHeader {height: 45px;display: flex;align-items: center}
-    #speakerIcon {width: 25px;height: 25px;background-color: aliceblue;margin-right: 15px;}
-    #notice {font-size: 14px;}
-    */
-    .mainHeader {height: 100px;display: flex;align-items: center;position: relative;}
-    .navigation {width: 369px;display: flex;flex-direction: row;justify-content: space-between;align-items: center;margin-left: 5px;}
-    nav {font-size: 18px;font-weight: bold;}
-    #logo {margin: 0 auto;position: absolute;left: 50%;transform: translateX(-50%);}
-    #logo img {width: 230px;line-height: 100px;}
+/* 헤더 */
+.mainHeader { height: 100px; display: flex; align-items: center; position: relative; }
+#logo { margin: 0 auto; position: absolute; left: 50%; transform: translateX(-50%); }
 
-    /*main 부분*/
-    main {width: 100%;position: relative;top: -250px;z-index: -1;}
+/* 디스코드 */
+#discord {width: 90px;height: 90px;position: fixed;background-color: white;transition: background-color 0.3s ease-in-out;bottom: 30px;right: 15px;display: flex; align-items: center; text-align: center;border-radius: 100%;box-sizing: border-box;z-index: 100;}
+#discordImg {width: 60%;margin: 0 auto ;}
+
+/* 소개 */
+.box { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
+
+/* 건축 */
+.build { width: 300px; height: 550px; position: relative;cursor: zoom-in;}
+.build_txt { width: 100%; height: 170px; bottom: 0; position: absolute; padding: 40px; box-sizing: border-box; background-color: rgba(0, 0, 0, 0.5); }
+.build_txt > h2 { font-size: 24px; font-weight: bold; }
+.build_txt > span { float: left; }
+.build_txt > img { margin-top: 38px; width: 66px; }
+
+/* 플러그인 */
+.plugin { height: 535px; }
+.plugin > img { float: left; }
+
+/* 푸터 */
+footer { height: 190px; border-top: 1px solid white; padding: 0 100px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
+footer > div { font-size: 16px; font-weight: bold; }
+footer > div > span { font-size: 14px; font-weight: 100; }
+footer > img {width: 230px;}
+
+/* 모바일 */
+@media screen and (max-width: 1399px) {    
+    .section { width: 100%; margin: 0 0 100px 0; }
+
+    /* 헤더 */
+    .mainHeader { height: 70px; }
+    #logo img { width: 150px; line-height: 70px; }
+    nav {display: none;}
+
+    /* 디스코드 */
+    #discord {width: 70px;height: 70px;}
+
+    /* 메인 */
+    main { width: 100%; position: relative; top: -100px; z-index: -1; margin: 0 auto; text-align: center; }
     main > div > img {width: 100%;height: auto;}
 
-    /*소개*/
-    .intro {width: 1200px;margin: 0 auto 250px auto;}
+    /* 소개 */
+    .intro { width: 300px; margin: 0 auto 150px auto; }
+    .text { height: 62px; text-align: center; font-weight: bold; margin-bottom: 40px; }
+    .text > h2 { font-size: 32px; color: var(--pink); margin-top: 15px; }
+    .text > span { font-size: 18px; }
 
-    /*건축*/
-    .text {height: 83px;text-align: center;font-weight: bold;margin-bottom: 40px;}
-    .text > h2 {font-size: 48px;color: var(--pink);margin-top: 15px;}
-    .text > span {font-size: 24px;}
-    .box {display: flex;flex-direction: row;justify-content: space-between;align-items: center;}
-    .build {width: 300px;height: 550px;position: relative;}
-    .build_txt {width: 100%;height: 170px;bottom: 0;position: absolute;padding: 40px;box-sizing: border-box;background-color: rgba(0, 0, 0, 0.5);}
-    .build_txt > h2 {font-size: 24px;font-weight: bold;}
-    .build_txt > span {float: left;}
-    .build_txt > img {margin-top: 38px;width: 66px;}
+    /* 플러그인 */
+    .worldEdit { float: left; }
+    .train { float: left; }
+    .worldEdit > h2 { font-size: 18px; font-weight: bold; margin-bottom: 10px; }
+    .train > h2 { font-size: 18px; font-weight: bold; margin-bottom: 10px; }
+    .plugin > img { margin: 25px 0; }
+    .plugin > div > span { font-size: 14px; }
+    #worldEdit { width: 100%; }
+    #train { width: 100%; }
 
-    /*플러그인*/
-    .plugin {height: 535px;}
-    .plugin > img {float: left;}
-    .worldEdit {float: left;margin-left: 45px;margin-top: 55px;}
-    .worldEdit > h2 {font-size: 24px;font-weight: bold;margin-bottom: 10px;}
-    .train {float: left;margin-top: -101px;}
-    .train > h2 {font-size: 24px;font-weight: bold;margin-bottom: 10px;}
+    /* 큐브시티 */
+    .kubeCity { width: 100%; text-align: center; }
+    .kubeCity > img { width: 100%; border-radius: 8px; box-sizing: border-box; }
+    .kubeCity > h2 { font-size: 24px; font-weight: bold; margin: 30px 0 15px 0; }
+    .kubeCity > span { display: block; margin-bottom: 30px; }
 
-    /*큐브시티*/
-    .kubeCity {width: 350px;text-align: center;}
-    .kubeCity > img {width: 350px;height: 250px;border-radius: 8px;box-sizing: border-box;}
-    .kubeCity > h2 {font-size: 24px;font-weight: bold;margin: 30px 0 15px 0;}
+    /* 푸터 */
+    footer {padding: 0;text-align: center;}
+    footer > img {width: 50%;margin: 0 auto;}
+}
 
-    /*푸터*/
-    footer {height: 190px;border-top: 1px solid white;padding: 0 100px;display: flex;flex-direction: row;justify-content: space-between;align-items: center;}
-    footer > div {font-size: 16px;font-weight: bold;}
-    footer > div > span {font-size: 14px;font-weight: 100;}
+/* PC */
+@media screen and (min-width: 1400px) {
+    .section { margin: 0 100px 150px 100px; }
+
+    /* 헤더 */
+    .mainHeader { height: 100px; display: flex; align-items: center; position: relative; }
+    .navigation { width: 369px; display: flex; justify-content: space-between; align-items: center; margin-left: 5px; }
+    nav {font-size: 18px; font-weight: bold;cursor: grab;transition: color 0.3s ease-in-out;}
+    nav:hover {color: gold;}
+    #logo img { width: 230px; line-height: 100px; }
+
+    /* 메인 */
+    main { width: 100%; position: relative; top: -250px; z-index: -1; }
+    main > div > img { width: 100%; height: auto; }
+
+    /* 소개 */
+    .intro { width: 1200px; margin: 0 auto 250px auto; }
+    .text { height: 83px; text-align: center; font-weight: bold; margin-bottom: 40px; }
+    .text > h2 { font-size: 48px; color: var(--pink); margin-top: 15px; }
+    .text > span { font-size: 24px; }
+
+    /* 플러그인 */
+    .plugin { height: 535px; }
+    .plugin > img { float: left; }
+    .worldEdit { float: left; margin-left: 45px; margin-top: 55px; }
+    .worldEdit > h2 { font-size: 24px; font-weight: bold; margin-bottom: 10px; }
+    .train { float: left; margin-top: -101px; }
+    .train > h2 { font-size: 24px; font-weight: bold; margin-bottom: 10px; }
+    #worldEdit { width: 602px; height: 362px; }
+    #train { width: 560px; height: 339px; margin-left: 25px; margin-top: 91px; }
+
+    /* 큐브시티 */
+    .kubeCity { width: 350px; text-align: center; }
+    .kubeCity > img { width: 350px; height: 250px; border-radius: 8px; box-sizing: border-box; }
+    .kubeCity > h2 { font-size: 24px; font-weight: bold; margin: 30px 0 15px 0; }
 
     /*애니메이션*/
-    .animation {transition: all 0.2s linear;}
-    .animation:hover {transform: scale(1.05);z-index: 100;box-shadow: 0 0 5px 5px var(--pink);}
-    .opacity:hover .animation {opacity: 0.3;}
-    .opacity .animation:hover {opacity: 1;}
+    .animation { transition: all 0.2s linear; }
+    .animation:hover { transform: scale(1.05); z-index: 100; box-shadow: 0 0 5px 5px var(--pink); }
+    .opacity:hover .animation { opacity: 0.3; }
+    .opacity .animation:hover { opacity: 1; }
 }
